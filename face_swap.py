@@ -6,7 +6,7 @@ import numpy as np
 # Initialize FaceAnalysis and Swapper models
 face_app = FaceAnalysis(name='buffalo_l')  #buffalo_l is a face detection model
 face_app.prepare(ctx_id=0, det_size=(640, 640))
-swapper = insightface.model_zoo.get_model('inswapper.onnx', download=True, download_zip=False)   #inswapper.onnx is a face swap model
+swapper = insightface.model_zoo.get_model('inswapper.onnx', download=False, download_zip=False)   #inswapper.onnx is a face swap model
 
 def swap_faces(img1, img2):
     # Implementation of swap_faces function
